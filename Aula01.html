@@ -1,0 +1,59 @@
+<!-- AULA AO VIVO 01 -->
+
+<html>
+  <script>
+    // Verificar se um número é divisível por 3 ou 5, 
+    // se possível, retornar 'true', se não retornar 'false'
+
+    function verificaDivisivelOperadorOr(numero) {
+      if (numero % 3 === 0 || numero % 5 === 0) {
+        return true;
+      }
+      return false;
+    }
+
+    // Verificar se um número é divisível por 3 e 5, 
+    // se possível, retornar 'true', se não retornar 'false'
+
+    function verificaDivisivelOperadorAnd(numero) {
+      if (numero % 3 === 0 && numero % 5 === 0) {
+        return true;
+      }
+      return false;
+    }
+
+    // ao chamar a função no console, passar o valor inicial e final
+    function verificaIntervalo(inicial, final) {
+      var contador = 0;
+      var soma = 0;
+      var multiplicacao = 1;
+      var controle = inicial;
+
+      while(controle <= final) {
+
+        if (verificaDivisivelOperadorOr(controle) ) {
+          console.log(controle);
+          contador = contador + 1;
+          soma = soma + controle;
+          multiplicacao = multiplicacao * controle;
+        }
+
+        controle = controle + 1;
+      }
+
+      console.log(`Quantidade:  ${contador}`);
+      console.log(`Soma: ${soma}`);
+      console.log(`Multiplicação: ${multiplicacao}`);
+    }
+
+    // mesmo exemplo, utilizando for
+    /* for (var controle = inicial; controle <= final; controle = controle + 1){
+    if (verificaDivisivelOperadorOr(controle)) {
+      console.log(controle);
+          soma += controle; // mesma coisa que contador = contador++;
+          multiplicacao = multiplicacao * controle;
+    }
+  } */
+
+  </script>
+</html>
